@@ -12,19 +12,21 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var label: UILabel!
     
+    @IBOutlet weak var label1: UILabel!
+    
     @IBAction func SegmentedAction(_ sender: UISegmentedControl) {
         
         let index = sender.selectedSegmentIndex
         
         switch index {
         case 0:
-            label.text = "Swift"
+            label1.text = "Swift"
         case 1:
-            label.text = "Kotlin"
+            label1.text = "Kotlin"
         case 2:
-            label.text = "Java"
+            label1.text = "Java"
         default:
-            label.text = "Default"
+            label1.text = "Default"
         }
         
     }
@@ -39,9 +41,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
-        
     
     }
     
