@@ -8,29 +8,11 @@
 import Foundation
 import UIKit
 
-class Second_VC:UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
-    
-    // how many pickers
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return langugaes.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return langugaes[row]
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print("You selected \(langugaes[row])")
-    }
+class Second_VC:UIViewController, UIScrollViewDelegate{
     
     
-    @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var datePicker: UIDatePicker!
-    @IBOutlet weak var picker: UIPickerView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     
     
     var labelText = "Default"
@@ -40,26 +22,22 @@ class Second_VC:UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        label.text = labelText
+        //   label.text = labelText
         
-        picker.dataSource = self
-        picker.delegate = self
+        scrollView.contentSize = CGSize(width: scrollView.frame.width, height: scrollView.frame.height * 3)
+        
+        scrollView.delegate = self
         
     }
     
-    @IBAction func datepickerAction(_ sender: UIDatePicker) {
-        
-        let date = sender.date
-        let calendar = Calendar.current
-        let day = calendar.component(Calendar.Component.day, from: date)
-        print(day)
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        let formattedDate = dateFormatter.string(from: date)
-        print(formattedDate)
-        let formatString = dateFormatter.date(from: "2020-12-23")
-        print(formatString?.description)
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+            print("drag begin")
     }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        print("dra stop")
+    }
+    
     
     @IBAction func dismiss(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
