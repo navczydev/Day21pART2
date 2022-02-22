@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E0F195027C31096004D4921 /* TableView_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F194F27C31096004D4921 /* TableView_VC.swift */; };
+		0E4BB0A327C47D8B00A28F11 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4BB0A227C47D8B00A28F11 /* TableViewCell.swift */; };
 		0E84766427BB3B9E003BF1EF /* Second_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E84766327BB3B9E003BF1EF /* Second_VC.swift */; };
 		0E999A4727B35E3900650C6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E999A4627B35E3900650C6D /* AppDelegate.swift */; };
 		0E999A4927B35E3900650C6D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E999A4827B35E3900650C6D /* SceneDelegate.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E0F194F27C31096004D4921 /* TableView_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView_VC.swift; sourceTree = "<group>"; };
+		0E4BB0A227C47D8B00A28F11 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		0E84766327BB3B9E003BF1EF /* Second_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Second_VC.swift; sourceTree = "<group>"; };
 		0E999A4327B35E3900650C6D /* Udemycourse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Udemycourse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E999A4627B35E3900650C6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,7 +65,9 @@
 				0E999A4627B35E3900650C6D /* AppDelegate.swift */,
 				0E999A4827B35E3900650C6D /* SceneDelegate.swift */,
 				0E84766327BB3B9E003BF1EF /* Second_VC.swift */,
+				0E4BB0A227C47D8B00A28F11 /* TableViewCell.swift */,
 				0E999A4A27B35E3900650C6D /* ViewController.swift */,
+				0E0F194F27C31096004D4921 /* TableView_VC.swift */,
 				0E999A4C27B35E3900650C6D /* Main.storyboard */,
 				0E999A4F27B35E3A00650C6D /* Assets.xcassets */,
 				0E999A5127B35E3A00650C6D /* LaunchScreen.storyboard */,
@@ -144,6 +150,8 @@
 				0E999A4B27B35E3900650C6D /* ViewController.swift in Sources */,
 				0E999A4727B35E3900650C6D /* AppDelegate.swift in Sources */,
 				0E84766427BB3B9E003BF1EF /* Second_VC.swift in Sources */,
+				0E4BB0A327C47D8B00A28F11 /* TableViewCell.swift in Sources */,
+				0E0F195027C31096004D4921 /* TableView_VC.swift in Sources */,
 				0E999A4927B35E3900650C6D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
