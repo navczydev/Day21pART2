@@ -36,6 +36,9 @@ class ViewController: UIViewController {
             let nextVC = segue.destination as! Second_VC
             nextVC.labelText = "Hello set from segue"
             
+        }else if segue.identifier == "containerView"{
+            let nextVC = segue.destination as! Container_VCViewController
+            nextVC.name = "Nav Singh"
         }
     }
     

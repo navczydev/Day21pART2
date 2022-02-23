@@ -105,9 +105,14 @@
                                     <action selector="SegmentedAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="u4c-8r-Xct"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wB5-f9-zwh">
-                                <rect key="frame" x="61" y="654" width="222" height="140"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2lv-ty-N1K">
+                                <rect key="frame" x="66" y="588" width="328" height="273"/>
+                                <connections>
+                                    <segue destination="5ai-Ua-nTU" kind="embed" identifier="containerView" id="IdV-Ee-MNg"/>
+                                </connections>
+                            </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wB5-f9-zwh">
+                                <rect key="frame" x="22" y="654" width="49" height="62"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -118,15 +123,21 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5lF-ru-KmA" secondAttribute="trailing" constant="20" id="0F9-Yo-AFw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BWF-Du-app" secondAttribute="trailing" constant="16" id="2Mg-6Y-a4O"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2lv-ty-N1K" secondAttribute="trailing" constant="20" id="6l3-tx-znC"/>
                             <constraint firstItem="C6E-qF-gAR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="GWt-eP-Su8"/>
                             <constraint firstItem="BWF-Du-app" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="I8J-Ig-g3a"/>
                             <constraint firstItem="Q9b-JV-n4m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Mwu-dG-q3f"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Q9b-JV-n4m" secondAttribute="trailing" constant="16" id="Rz7-nT-QQS"/>
                             <constraint firstItem="Q9b-JV-n4m" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UvI-9Y-emG"/>
                             <constraint firstItem="Q9b-JV-n4m" firstAttribute="top" secondItem="5lF-ru-KmA" secondAttribute="bottom" constant="45" id="aLp-2p-UEF"/>
+                            <constraint firstItem="wB5-f9-zwh" firstAttribute="top" secondItem="C6E-qF-gAR" secondAttribute="bottom" constant="73" id="bI3-WJ-AJn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2lv-ty-N1K" secondAttribute="bottom" constant="1" id="e2F-nX-lrZ"/>
+                            <constraint firstItem="2lv-ty-N1K" firstAttribute="top" secondItem="C6E-qF-gAR" secondAttribute="bottom" constant="7" id="fIZ-xW-zHV"/>
                             <constraint firstItem="5lF-ru-KmA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fcd-Mg-ikG"/>
+                            <constraint firstItem="wB5-f9-zwh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="fwC-Xf-LPJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C6E-qF-gAR" secondAttribute="trailing" constant="16" id="j09-aU-iYu"/>
                             <constraint firstItem="5lF-ru-KmA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="137" id="lSe-Nc-OE3"/>
+                            <constraint firstItem="2lv-ty-N1K" firstAttribute="leading" secondItem="wB5-f9-zwh" secondAttribute="trailing" constant="2" id="maR-YK-fik"/>
                             <constraint firstItem="BWF-Du-app" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="qlw-Ln-HE5"/>
                             <constraint firstItem="C6E-qF-gAR" firstAttribute="top" secondItem="BWF-Du-app" secondAttribute="bottom" constant="48" id="rcq-2x-zQv"/>
                         </constraints>
@@ -206,7 +217,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sz4-Fe-RJ2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="960.86956521739137" y="115.84821428571428"/>
+            <point key="canvasLocation" x="1813" y="744"/>
         </scene>
         <!--Table View vc-->
         <scene sceneID="Jgk-FA-DJk">
@@ -217,8 +228,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IoJ-bF-uWM">
-                                <rect key="frame" x="38" y="57" width="339" height="729"/>
+                                <rect key="frame" x="38" y="57" width="339" height="379"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="379" id="Ded-wI-peD"/>
+                                </constraints>
                                 <color key="separatorColor" systemColor="systemOrangeColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseTitle" rowHeight="90" id="AQV-8I-68u" customClass="TableViewCell" customModule="Udemycourse" customModuleProvider="target">
@@ -271,14 +285,23 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2oO-D3-fzb">
+                                <rect key="frame" x="38" y="489" width="339" height="286"/>
+                                <connections>
+                                    <segue destination="5ai-Ua-nTU" kind="embed" identifier="secondvc" id="GfI-YX-f3d"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZdX-Wj-5g5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="IoJ-bF-uWM" firstAttribute="top" secondItem="ZdX-Wj-5g5" secondAttribute="top" constant="57" id="V4a-2V-M6i"/>
+                            <constraint firstItem="2oO-D3-fzb" firstAttribute="leading" secondItem="ZdX-Wj-5g5" secondAttribute="leading" constant="38" id="VxS-0l-qdZ"/>
                             <constraint firstItem="ZdX-Wj-5g5" firstAttribute="trailing" secondItem="IoJ-bF-uWM" secondAttribute="trailing" constant="37" id="Vzw-YS-hUJ"/>
                             <constraint firstItem="IoJ-bF-uWM" firstAttribute="leading" secondItem="ZdX-Wj-5g5" secondAttribute="leading" constant="38" id="Yuy-sA-KGH"/>
-                            <constraint firstItem="ZdX-Wj-5g5" firstAttribute="bottom" secondItem="IoJ-bF-uWM" secondAttribute="bottom" constant="22" id="inn-IW-gHR"/>
+                            <constraint firstItem="ZdX-Wj-5g5" firstAttribute="trailing" secondItem="2oO-D3-fzb" secondAttribute="trailing" constant="37" id="hdE-Ia-QAT"/>
+                            <constraint firstItem="ZdX-Wj-5g5" firstAttribute="bottom" secondItem="2oO-D3-fzb" secondAttribute="bottom" constant="33" id="imM-ZQ-TnY"/>
+                            <constraint firstItem="2oO-D3-fzb" firstAttribute="top" secondItem="IoJ-bF-uWM" secondAttribute="bottom" constant="53" id="xz2-yO-xQc"/>
                         </constraints>
                     </view>
                     <connections>
@@ -287,9 +310,43 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cxC-OF-xnF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1818.840579710145" y="115.84821428571428"/>
+            <point key="canvasLocation" x="2747.826086956522" y="115.84821428571428"/>
+        </scene>
+        <!--ContainerVC View Controller-->
+        <scene sceneID="ZS7-gy-cYv">
+            <objects>
+                <viewController id="5ai-Ua-nTU" customClass="Container_VCViewController" customModule="Udemycourse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m24-ll-FVp">
+                        <rect key="frame" x="0.0" y="0.0" width="339" height="286"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lnX-0g-GSa">
+                                <rect key="frame" x="66" y="126" width="41.5" height="58"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="lnX-0g-GSa" secondAttribute="bottom" constant="102" id="1Qz-hm-wuQ"/>
+                            <constraint firstItem="lnX-0g-GSa" firstAttribute="leading" secondItem="m24-ll-FVp" secondAttribute="leading" constant="66" id="UvK-3d-7NP"/>
+                            <constraint firstItem="lnX-0g-GSa" firstAttribute="top" secondItem="m24-ll-FVp" secondAttribute="top" constant="126" id="fvj-0e-MIV"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lnX-0g-GSa" secondAttribute="trailing" constant="20" symbolic="YES" id="ptS-AV-F2l"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="lnX-0g-GSa" id="qbm-kp-Yxa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rJ9-Hz-QMr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="815.94202898550736" y="2.34375"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="GfI-YX-f3d"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="square.and.arrow.up.circle" catalog="system" width="128" height="121"/>
         <systemColor name="linkColor">

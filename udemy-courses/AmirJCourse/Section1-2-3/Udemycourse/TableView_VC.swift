@@ -57,6 +57,17 @@ class TableView_vc:ViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var tableView: UITableView!
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "tologin"{
+            let nextVC = segue.destination as! Second_VC
+            nextVC.labelText = "Hello set from segue"
+            
+        }else if segue.identifier == "secondvc"{
+            let nextVC = segue.destination as! Container_VCViewController
+            nextVC.name = "Second VC"
+        }
+    }
+    
     override func viewDidLoad(){
         super.viewDidLoad();
         

@@ -19,6 +19,18 @@ class Second_VC:UIViewController, UIScrollViewDelegate{
     
     let langugaes = ["Kotlin", "Java", "Swift"]
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "tologin"{
+            let nextVC = segue.destination as! Second_VC
+            nextVC.labelText = "Hello set from segue"
+            
+        }else if segue.identifier == "number2"{
+            let nextVC = segue.destination as! Container_VCViewController
+            nextVC.name = "Second VC"
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,7 +43,7 @@ class Second_VC:UIViewController, UIScrollViewDelegate{
     }
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-            print("drag begin")
+        print("drag begin")
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
