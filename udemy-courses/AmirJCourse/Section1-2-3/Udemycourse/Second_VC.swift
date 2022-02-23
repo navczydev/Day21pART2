@@ -25,9 +25,6 @@ class Second_VC:UIViewController, UIScrollViewDelegate{
             let nextVC = segue.destination as! Second_VC
             nextVC.labelText = "Hello set from segue"
             
-        }else if segue.identifier == "number2"{
-            let nextVC = segue.destination as! Container_VCViewController
-            nextVC.name = "Second VC"
         }
     }
     
