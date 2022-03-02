@@ -6,7 +6,7 @@
 //
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var button:UIButton!
     
@@ -30,6 +30,7 @@ class ViewController: UIViewController {
         }
         
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "tologin"{
@@ -56,6 +57,44 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func alertaction(_ sender: UIButton) {
+        
+        let alertDialog = UIAlertController(title: "Alert section", message: "Hi from Alert", preferredStyle: UIAlertController.Style.alert)
+        //UIAlertController.Style.sheet
+        
+        alertDialog.addTextField{ (name) in
+            name.isSecureTextEntry = true
+            name.textAlignment = .center
+            name.font = .systemFont(ofSize: 24)
+            
+            name.delegate = self
+        }
+        
+        // okAction
+        let okAction = UIAlertAction(title: "ok", style: UIAlertAction.Style.default)
+        {
+            (action) in
+            
+            let password = alertDialog.textFields![0].text
+            print("Password is: \(password ?? "NA")")
+            
+            //            if(password?.isEmpty == true){
+            //                action.isEnabled = false
+            //
+            //            }
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel){
+            (cancel) in
+            print("Cancelled")
+        }
+        
+        alertDialog.addAction(okAction)
+        alertDialog.addAction(cancelAction)
+        
+        self.present(alertDialog, animated: true, completion: nil)
+        
+    }
     //hard-coded outlets
     
     
