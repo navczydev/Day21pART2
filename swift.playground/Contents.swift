@@ -48,4 +48,14 @@ if result != nil{
 // let, let, let {}
 // defer{} always exceure at the end
 
+var runCount = 0
+
+Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { timer in
+    print("Timer fired!")
+    runCount += 1
+
+    if runCount == 3 {
+        timer.invalidate()
+    }
+}
 
